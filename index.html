@@ -115,9 +115,7 @@
                         <div class="bg-slate-50 p-6 rounded-xl">
                             <h4 class="text-lg font-semibold text-violet-700 mb-4">Industry Experience</h4>
                             <p class="text-gray-600 mb-4">
-                                In the industry, I focus on developing practical AI solutions across various domains. My expertise includes 
-                                implementing computer vision systems for production line validation, OCR and document understanding 
-                                pipelines, and designing agentic workflows for business process automation through strong DevOps practices and cloud infrastructure. 
+                                I develop and deploy end-to-end AI solutions for high-impact industry challenges. Key projects include building a large-scale computer vision system for American Express to automate quality control, and leading the development of a custom OCR, extraction, and validation pipeline for the NVWA (Dutch Food Safety Authority) to digitize handwritten documents, drastically reducing manual processing time.
                             </p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-3 py-1 bg-violet-50 text-violet-700 rounded-full text-sm">OCR & Computer Vision in Manufacturing</span>
@@ -250,10 +248,11 @@
                             <h4 class="text-xl font-semibold text-gray-800">AI Engineer</h4>
                             <p class="text-violet-600 font-medium">DataNorth</p>
                             <p class="text-gray-500 text-sm">2025 - Present | Groningen, the Netherlands</p>
-                            <p class="mt-2 text-gray-600">
-                                Developing machine learning solutions for industry applications with focus
-                                on predictive modeling and data analysis.
-                            </p>
+                            <ul class="list-disc pl-5 mt-2 text-gray-600 space-y-2">
+                                <li><b>American Express:</b> Developed a large-scale computer vision system to automate quality inspection for personalized cards, significantly reducing manual work.</li>
+                                <li><b>NVWA (Dutch Food Safety Authority):</b> As Lead Engineer, architected a custom OCR, extraction & validation pipeline to process handwritten documents, reducing inspection time substantially.</li>
+                                <li>Engineered the NVWA solution with a scalable API, user-friendly frontend (web/mobile), and deployed the full infrastructure as code (Terraform on Azure).</li>
+                            </ul>
                         </div>
                         
                         <!-- Timeline Item -->
@@ -281,6 +280,7 @@
                                     <h5 class="font-medium text-gray-800 mb-2">AI & Mathematics</h5>
                                     <ul class="list-disc pl-4 text-gray-600 space-y-1">
                                         <li>Reinforcement Learning</li>
+                                        <li>Introduction to Optimization</li>
                                         <li>Fundamentals of AI</li>
                                         <li>Signals and Systems</li>
                                     </ul>
@@ -324,7 +324,33 @@
             </div>
             
             <div class="space-y-6">
-                <!-- Publication 1 -->
+                <div class="publication-card bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-50 text-indigo-700 p-3 rounded-lg mr-6">
+                            <i class="fas fa-file-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">
+                                Sparsity-Driven Plasticity in Multi-Task Reinforcement Learning
+                            </h3>
+                            <p class="text-indigo-600 font-medium">A. Todorov, J. Cardenas-Cartagena, R. F. Cunha, M. Zullich, M. Sabatelli</p>
+                            <p class="text-gray-600 text-sm mt-1">
+                                Transactions on Machine Learning Research (TMLR) · 2025
+                            </p>
+                            <p class="text-gray-600 mt-3">
+                                 We examine the issue of plasticity loss in multi-task reinforcement learning (MTRL), where higher representational flexibility is crucial for managing diverse and potentially conflicting task demands. We systematically explore how sparsification methods, particularly Gradual Magnitude Pruning (GMP) and Sparse Evolutionary Training (SET), enhance plasticity and consequently improve performance in MTRL agents. We evaluate these approaches across distinct MTRL architectures (shared backbone, Mixture of Experts, Mixture of Orthogonal Experts) on standardized MTRL benchmarks, comparing against dense baselines, and a comprehensive range of alternative plasticity-inducing or regularization methods. Our results demonstrate that both GMP and SET effectively mitigate key indicators of plasticity degradation, such as neuron dormancy and representational collapse. These plasticity improvements often correlate with enhanced multi-task performance, with sparse agents frequently outperforming dense counterparts and achieving competitive results against explicit plasticity interventions.
+                            </p>
+                            <div class="mt-4">
+                                <a href="https://openreview.net/forum?id=9L4Z23EfE9" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium mr-4">
+                                    <i class="fas fa-external-link-alt mr-1"></i> Read Paper
+                                </a>
+                                <a href="https://github.com/atodorov284/sparsity_driven_plasticity" target="_blank" class="text-violet-600 hover:text-violet-800 font-medium">
+                                    <i class="fab fa-github mr-1"></i> Code Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="publication-card bg-white rounded-lg p-6 shadow-sm">
                     <div class="flex items-start">
                         <div class="bg-indigo-50 text-indigo-700 p-3 rounded-lg mr-6">

@@ -38,7 +38,7 @@ img {
 
 .page {
     max-width: 1100px;
-    margin: 0 auto 0 10rem;
+    margin: 0 auto;
     padding: 3rem 1.5rem 4rem 0rem;
     display: flex;
     gap: 2.2rem;

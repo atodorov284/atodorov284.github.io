@@ -1,0 +1,410 @@
+:root {
+    --background: #f7f7f5;
+    --surface: #ffffff;
+    --text: #1f1f1f;
+    --muted: #636363;
+    --accent: #2f3e73;
+    --border: #d9d9d4;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem 0rem;
+    display: flex;
+    gap: 2.2rem;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+}
+
+.menu {
+    width: 190px;
+}
+
+.menu nav {
+    position: sticky;
+    top: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    border-right: 1px solid var(--border);
+    gap: 0.75rem;
+}
+
+.menu a {
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    color: var(--muted);
+}
+
+.menu a.active {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.overline {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin: 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.profile-text {
+    flex: 1;
+    text-align: left;
+    max-width: 560px;
+}
+
+.profile-social {
+    margin-top: 1.1rem;
+}
+
+.profile .social-links {
+    justify-content: flex-start;
+}
+
+.profile-text .subtitle {
+    display: block;
+}
+
+.profile h1 {
+    font-size: 2.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin: 0.4rem 0 0.8rem;
+}
+
+.subtitle {
+    margin: 0.2rem 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    margin-left: auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem 1.8rem;
+}
+
+.panel h2 {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.plain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plain-list li + li {
+    margin-top: 1.2rem;
+}
+
+.plain-list strong {
+    font-weight: 600;
+}
+
+.tag-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tag-list li {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.site-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted);
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.social-links svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.last-updated {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+}
+
+.page-header p {
+    margin: 0.6rem 0 0;
+    color: var(--muted);
+}
+
+.entry {
+    margin-bottom: 1.8rem;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.entry-title {
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+    font-size: 1.1rem;
+}
+
+.entry-meta {
+    margin: 0 0 0.6rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.entry-summary {
+    margin: 0;
+}
+
+.entry-links {
+    margin-top: 0.6rem;
+}
+
+.entry-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.entry-links a + a {
+    margin-left: 1rem;
+}
+
+.entry-links svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 0.95rem;
+}
+
+.download-link:hover {
+    text-decoration: none;
+    background: rgba(47, 62, 115, 0.08);
+}
+
+.materials-section {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--background);
+    padding: 0.95rem 1rem;
+}
+
+.materials-section + .materials-section {
+    margin-top: 0.9rem;
+}
+
+.materials-section summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+}
+
+.materials-section summary::-webkit-details-marker {
+    display: none;
+}
+
+.materials-section summary::after {
+    content: "+";
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.materials-section[open] summary::after {
+    content: "-";
+    color: var(--accent);
+}
+
+.materials-section summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.materials-content {
+    margin-top: 0.75rem;
+}
+
+.materials-content p {
+    margin: 0 0 0.7rem;
+    color: var(--muted);
+}
+
+@media (max-width: 900px) {
+    .page {
+        flex-direction: column;
+        padding: 2.5rem 1.25rem 3rem;
+    }
+
+    .menu {
+        width: 100%;
+    }
+
+    .menu nav {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding-right: 0;
+        padding-left: 0;
+        border-right: none;
+        border-top: 1px solid var(--border);
+        padding-top: 1.2rem;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        font-size: 0.98rem;
+    }
+
+    .page {
+        padding: 2rem 1.25rem 2.5rem;
+    }
+
+    .panel {
+        padding: 1.4rem 1.5rem;
+    }
+}

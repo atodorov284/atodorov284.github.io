@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleksandar Todorov | Materials</title>
+    <link rel="icon" type="image/png" href="../assets/web_pic.png">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/components.js" defer></script>
+</head>
+<body data-page="materials">
+    <div class="page">
+        <aside class="menu">
+            <nav data-component="navigation"></nav>
+        </aside>
+
+        <main class="content">
+            <div data-component="page-header" data-title="Materials"></div>
+
+            <section class="panel">
+                <p>
+                    Since some students at the University of Groningen have asked me about general interesting materials related to my work and projects, I decided to create this page where I will share some of the materials that I find interesting and useful. Please contact me if you have any questions or if there is perhaps a mistake in the content. I will try to keep this page updated with new materials as I find them.
+                </p>
+            </section>
+
+            <section class="panel">
+                <h2>Collections</h2>
+
+                <details class="materials-section">
+                    <summary>Thesis Materials</summary>
+                    <div class="materials-content">
+                        <p>Here are some of the materials for my Bachelor's thesis.</p>
+                        <ul class="plain-list">
+                            <li>
+                                <span class="muted">Slides are available <a href="../assets/materials/thesis_slides.pdf" target="_blank">here</a>.</span> <br>
+                                <span class="muted">Paper is available <a href="https://openreview.net/forum?id=9L4Z23EfE9" target="_blank">here</a>.</span> <br>
+                                <span class="muted">Poster (presented at the EWRL 2025 in Tübingen) is available <a href="../assets/materials/thesis_poster.pdf" target="_blank">here</a>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="materials-section">
+                    <summary>Other Materials</summary>
+                    <div class="materials-content">
+                        <p>I will occasionally upload other interesting slide decks for tutorials and teaching sessions.</p>
+                        <ul class="plain-list">
+                            <li>
+                                <ul>    
+                                    <li> <span class="muted">Some mathematical preliminaries (basic probability theory and calculus) for machine/reinforcement learning slides are available <a href="../assets/materials/math_preliminaries.pdf" target="_blank">here</a>. I also created an exercise sheet for the same topic, which is available <a href="../assets/materials/math_preliminaries_exercise_sheet.pdf" target="_blank">here</a>. </span> </li>
+                                    <li> <span class="muted">Many people have heard of Adam, but are not aware that Adam is not guaranteed to converge to a stationary point. That is, one can construct a convex function for which Adam does not converge, while simple algorithms like SGD have convergence guarantees. Adam is so-called adaptive because it adapts the learning rate for each parameter based on estimates of the moments of the gradients, and is built on top of earlier versions such as RMSProp and AdaGrad. A convergence proof of AdaGrad and a short overview of adaptive optimizers is available in <a href="../assets/materials/adaptive_optimizers.pdf" target="_blank">this document</a>.</span> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <footer class="site-footer" data-component="footer"></footer>
+        </main>
+    </div>
+</body>
+</html>

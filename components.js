@@ -31,6 +31,31 @@ const socialLinksTemplate = `
     </ul>
 `;
 
+let pageHeaderTemplatePromise;
+
+const loadPageHeaderTemplate = () => {
+    if (!pageHeaderTemplatePromise) {
+        pageHeaderTemplatePromise = fetch("header.html")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Unable to load header template: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then((html) => {
+                const template = document.createElement("template");
+                template.innerHTML = html.trim();
+                return template;
+            })
+            .catch((error) => {
+                console.error(error);
+                return null;
+            });
+    }
+
+    return pageHeaderTemplatePromise;
+};
+
 const formatLastUpdated = () => {
     const parsed = new Date(document.lastModified);
     if (Number.isNaN(parsed.getTime())) {
@@ -62,6 +87,52 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('[data-component="social-links"]').forEach((container) => {
         container.innerHTML = socialLinksTemplate;
     });
+
+    const pageHeaderPlaceholders = document.querySelectorAll('[data-component="page-header"]');
+    if (pageHeaderPlaceholders.length > 0) {
+        loadPageHeaderTemplate().then((template) => {
+            pageHeaderPlaceholders.forEach((placeholder) => {
+                const title = placeholder.dataset.title || "";
+                const subtitle = placeholder.dataset.subtitle || "";
+
+                if (!template) {
+                    const fallbackHeader = document.createElement("header");
+                    fallbackHeader.className = "page-header";
+
+                    const fallbackTitle = document.createElement("h1");
+                    fallbackTitle.textContent = title;
+                    fallbackHeader.appendChild(fallbackTitle);
+
+                    if (subtitle) {
+                        const fallbackSubtitle = document.createElement("p");
+                        fallbackSubtitle.textContent = subtitle;
+                        fallbackHeader.appendChild(fallbackSubtitle);
+                    }
+
+                    placeholder.replaceWith(fallbackHeader);
+                    return;
+                }
+
+                const headerFragment = template.content.cloneNode(true);
+                const titleSlot = headerFragment.querySelector('[data-slot="title"]');
+                const subtitleSlot = headerFragment.querySelector('[data-slot="subtitle"]');
+
+                if (titleSlot) {
+                    titleSlot.textContent = title;
+                }
+
+                if (subtitleSlot) {
+                    if (subtitle) {
+                        subtitleSlot.textContent = subtitle;
+                    } else {
+                        subtitleSlot.remove();
+                    }
+                }
+
+                placeholder.replaceWith(headerFragment);
+            });
+        });
+    }
 
     document.querySelectorAll('[data-component="footer"]').forEach((footer) => {
         footer.innerHTML = `

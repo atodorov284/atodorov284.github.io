@@ -1,7 +1,6 @@
 const navItems = [
     { id: "profile", label: "Profile", path: "index.html" },
     { id: "publications", label: "Publications", path: "pages/publications.html" },
-    { id: "materials", label: "Materials", path: "pages/materials.html" },
     { id: "cv", label: "CV", path: "pages/cv.html" },
     { id: "contact", label: "Contact", path: "pages/contact.html" }
 ];

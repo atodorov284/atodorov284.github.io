@@ -4,6 +4,7 @@ const navItems = [
     { id: "cv", label: "CV", path: "pages/cv.html" },
     { id: "contact", label: "Contact", path: "pages/contact.html" }
 ];
+const siteLastUpdated = "2026-08-07";
 const rootPrefix = window.location.pathname.includes("/pages/") ? "../" : "";
 
 const icons = {
@@ -57,15 +58,16 @@ const loadPageHeaderTemplate = () => {
 };
 
 const formatLastUpdated = () => {
-    const parsed = new Date(document.lastModified);
+    const parsed = new Date(`${siteLastUpdated}T00:00:00Z`);
     if (Number.isNaN(parsed.getTime())) {
-        return document.lastModified;
+        return siteLastUpdated;
     }
 
     return parsed.toLocaleDateString("en-GB", {
         day: "numeric",
         month: "short",
-        year: "numeric"
+        year: "numeric",
+        timeZone: "UTC"
     });
 };
 
